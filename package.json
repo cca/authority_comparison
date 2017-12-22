@@ -1,0 +1,16 @@
+{
+  "name": "authority_comparison",
+  "version": "1.0.0",
+  "description": "Compare authorities between our digital repository (EQUELLA) and library catalog (Koha) to see if there are inconsistencies.",
+  "main": "index.js",
+  "dependencies": {
+    "csv-parse": "^2.0.0",
+    "string-similarity": "^1.2.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "phette23 <phette23@gmail.com> (http://phette.net)",
+  "license": "ECL-2.0"
+}
