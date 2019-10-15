@@ -4,8 +4,8 @@
   "description": "Compare authorities between our digital repository (EQUELLA) and library catalog (Koha) to see if there are inconsistencies.",
   "main": "index.js",
   "dependencies": {
-    "csv-parse": "^2.0.0",
-    "string-similarity": "^1.2.0"
+    "csv-parse": "^4.4",
+    "string-similarity": "^3.0"
   },
   "devDependencies": {},
   "scripts": {
