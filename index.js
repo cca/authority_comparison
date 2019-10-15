@@ -12,7 +12,7 @@ let stats = {
 fs.createReadStream('./data/koha-authorities.csv')
     .pipe(parser({delimiter: ','}))
     .on('data', function(row) {
-        stats["authorities"]++
+        stats.authorities++
 
         taxo.results.forEach( d => {
             let koha_auth = row[0].trim()
@@ -22,7 +22,7 @@ fs.createReadStream('./data/koha-authorities.csv')
             let similarity = compare(koha_auth, equella_term)
 
             if (similarity > 0.9) {
-                stats["similar"]++
+                stats.similar++
 
                 if (koha_auth != equella_term) {
                     stats["similar but not equal"]++
@@ -33,7 +33,7 @@ fs.createReadStream('./data/koha-authorities.csv')
     })
     .on('end',function() {
         console.log('...finished\n')
-        stats["success rate"] = (1 - stats["similar but not equal"]/stats["similar"]) * 100
-        stats["success rate"] = stats["success ratio"].toFixed(2)
+        stats["success rate"] = (1 - stats["similar but not equal"]/stats.similar) * 100
+        stats["success rate"] = stats["success rate"].toFixed(2)
         console.log(stats)
     });
